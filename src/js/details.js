@@ -33,8 +33,8 @@ function loadpic(picpath)
     detailsinf(picpath) ;
 }
 
+loadfavorbutton(geturlvalue("pic")) ;
 
-loadpic(geturlvalue("pic")) ;
 
 function detailsinf(picpath)
 {
@@ -63,11 +63,13 @@ function detailsinf(picpath)
             $("#content2").html("Country:&nbsp"+nation) ;
             $("#content3").html("City:&nbsp"+city) ;
             $("#title").html(title) ;
+            loadfavorbutton(geturlvalue("pic"),"not") ;
         },
         error:function (err) {
             alert(err) ;
         }
     })
+
 }
 
 function favor(picpath)
@@ -98,6 +100,35 @@ function favor(picpath)
             }
             else
                 loadpic(picpath) ;
+        },
+
+    })
+}
+
+
+function loadfavorbutton(picpath,exe)
+{
+    let func = "check" ;
+    $.ajax({
+        url:'../php/favor.php',
+        data:{
+            PATH:picpath,
+            FUNC:func,
+        },
+        type:'POST',
+        success:function(data){
+            let favorbutton = document.getElementById("favorbutton") ;
+            if(data == "success")
+            {
+                favorbutton.value = "Cancel favor" ;
+            }
+            else if(data == "fail")
+            {
+                favorbutton.value = "Favor" ;
+            }
+
+            if(exe != "not")
+                loadpic(geturlvalue("pic")) ;
         },
 
     })

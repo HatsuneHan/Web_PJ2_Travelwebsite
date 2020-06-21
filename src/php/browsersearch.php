@@ -17,7 +17,7 @@ if($attr == "ALL"):
         $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE PATH IS NOT NULL AND UID != 0") ;
+        $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE PATH IS NOT NULL") ;
         $query->execute() ;
 
         while($row = $query -> fetch()):
@@ -49,7 +49,7 @@ else:
 
         if($attr == "Content"):
 
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :value AND PATH IS NOT NULL AND UID != 0") ;
+            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :value AND PATH IS NOT NULL") ;
             $query->bindValue(":value",$value) ;
             $query->execute() ;
 
@@ -60,7 +60,7 @@ else:
 
         elseif($attr == "City"):
 
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :value) AND PATH IS NOT NULL AND UID != 0") ;
+            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :value) AND PATH IS NOT NULL") ;
             $query->bindValue(":value",$value) ;
             $query->execute() ;
 
@@ -72,7 +72,7 @@ else:
 
         elseif($attr == "Country"):
 
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :value) AND PATH IS NOT NULL AND UID != 0") ;
+            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :value) AND PATH IS NOT NULL") ;
             $query->bindValue(":value",$value) ;
             $query->execute() ;
 
@@ -81,15 +81,15 @@ else:
             endwhile;
 
 
-        elseif($attr == "Title"):
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Title LIKE :value AND UID != 0") ;
-            $title = "%" . $value . "%" ;
-            $query->bindValue(":value",$title) ;
-            $query->execute() ;
+         elseif($attr == "Title"):
+             $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Title LIKE :value") ;
+             $title = "%" . $value . "%" ;
+             $query->bindValue(":value",$title) ;
+             $query->execute() ;
 
-            while($row = $query -> fetch()):
-                array_push($resultarray,$row['PATH']) ;
-            endwhile;
+             while($row = $query -> fetch()):
+                 array_push($resultarray,$row['PATH']) ;
+             endwhile;
 
         endif ;
 

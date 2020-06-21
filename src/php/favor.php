@@ -6,6 +6,7 @@ define('DBPASS', 'xbgd1993');
 define('DBCONNSTRING','mysql:host=localhost;dbname=travelwebsite');
 
 $picpath = $_POST['PATH'] ;
+$func = $_POST['FUNC'] ;
 
 try {
     session_start() ;
@@ -38,13 +39,15 @@ try {
         if($result):
             $q = $pdo ->prepare("DELETE FROM travelimagefavor WHERE FavorID = :fid") ;
             $q ->bindValue(":fid",$result) ;
-            $q->execute() ;
+            if($func != "check")
+                $q->execute() ;
             echo "success"  ;
         else:
             $q = $pdo ->prepare("INSERT INTO travelimagefavor VALUES(NULL,:uid,:imageid)") ;
             $q ->bindValue(":imageid",$picid) ;
             $q ->bindValue(":uid", $username) ;
-            $q->execute() ;
+            if($func != "check")
+                $q->execute() ;
             echo "fail" ;
         endif;
 
