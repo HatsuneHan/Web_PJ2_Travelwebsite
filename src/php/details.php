@@ -52,7 +52,14 @@ try {
     $query->execute() ;
 
     $tt = $query->fetchColumn() ;
-    echo $tt ;
+    echo $tt . "&";
+
+    $query = $pdo->prepare("SELECT UserName FROM traveluser WHERE UID IN (SELECT UID FROM travelimage WHERE PATH = :picpath) ;");
+    $query->bindValue(':picpath',$picpath) ;
+    $query->execute() ;
+
+    $username = $query->fetchColumn() ;
+    echo $username ;
 
 
 

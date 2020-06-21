@@ -52,6 +52,7 @@ function detailsinf(picpath)
             let des = tmp[3] ;
             let content = tmp[4] ;
             let title = tmp[5] ;
+            let username = tmp[6] ;
             // alert(des) ;
             if(des)
                 $("#pictext").html(des) ;
@@ -62,7 +63,7 @@ function detailsinf(picpath)
             $("#content1").html("Content:&nbsp"+content) ;
             $("#content2").html("Country:&nbsp"+nation) ;
             $("#content3").html("City:&nbsp"+city) ;
-            $("#title").html(title) ;
+            $("#title").html(title + " <span>"+"by " + username+"</span>") ;
             loadfavorbutton(geturlvalue("pic"),"not") ;
         },
         error:function (err) {
