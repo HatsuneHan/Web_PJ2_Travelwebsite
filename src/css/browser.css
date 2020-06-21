@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    color: #000000;
+    background-color: #f0f0f0;
+
+}
+
+.aside{
+    float:left;
+    margin:4% 1%;
+    width:17%
+}
+
+/*#page{*/
+/*    position:fixed;*/
+/*    bottom:200px;*/
+/*}*/
+
+.search{
+    position: relative;
+    margin-left: 5%;
+    margin-top:  5%;
+    border-radius: 5px;
+    border: solid .3em #e0e0e0;
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 2px ;
+    background-color: #e0e0e0;
+}
+
+.Hot{
+    position: relative;
+    margin-left: 5%;
+    margin-top:  5%;
+    border-radius: 5px;
+    border: solid .3em #e0e0e0;
+    background-color: #e0e0e0;
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 2px ;
+    display: none;
+}
+
+#search{
+    border-style: none;
+    outline:none;
+    width:75%;
+}
+
+.line2{
+    background-color: white;
+}
+
+.tabletext{
+    background-color: #e0e0e0;
+}
+
+.country{
+    position: relative;
+    padding-left: 10px ;
+}
+
+.searchbutton{
+    display: inline-block;
+    width:20%;
+}
+
+#search{
+    padding-left: 10px;
+}
+
+.filter{
+    float:left;
+    margin:4% 1%;
+    width: 70%;
+}
+
+.filtertools{
+    position: relative;
+    margin-left: 3%;
+    margin-top:  1.15%;
+    border-radius: 5px;
+    border: solid .3em #e0e0e0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px ;
+    background-color: #e0e0e0;
+}
+
+.button{
+    background-color: white;
+}
+
+.image a{
+    display: inline-block;
+    position: relative;
+    margin-right:50px ;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.filterbutton select{
+    width:20%;
+    height:30px;
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline:none;
+    background-color: #f0f0f0;
+}
+
+.filterbutton input{
+    width:20%;
+    height:30px;
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline:none;
+    background-color: #08afad;
+    margin-left: 10px;
+}
+
+
+.tablebutton{
+    background-color: white;
+}
+option::-ms-expand{ display: none; }
+option{
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    appearance:none;
+}
+/* --背景色字体颜色--*/
+
+.option{
+    background-color: #f0f0f0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.tableimg{
+    background-color: white;
+
+}
+
+#pagenum{
+    position: relative;
+    margin-left: 35%;
+}
+.pagenum{
+    display: inline-block;
+    width:12px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.pagenum2{
+    display: inline-block;
+    width:30px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.pagenum2:hover{
+    background-color: #f0f0f0;
+}
+
+
+.pagenum:hover{
+    background-color: #f0f0f0;
+}
+
+
+#now{
+    color: black;
+}
+
+.image a{
+    display: inline-block;
+}
+
+
+.image a{
+    width:195px ;
+    height:195px;
+}
+
+.image{
+    position: relative;
+    margin-left: 14px;
+}
+
+#showimg1{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/222222.jpg") no-repeat center;*/
+}
+
+#showimg2{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/222223.jpg") no-repeat center;*/
+}
+
+#showimg3{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855174537.jpg") no-repeat center;*/
+}
+
+#showimg4{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855191275.jpg") no-repeat center;*/
+}
+
+#showimg5{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855209453.jpg") no-repeat center;*/
+}
+
+#showimg6{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855213165.jpg") no-repeat center;*/
+}
+
+#showimg7{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855221959.jpg") no-repeat center;*/
+}
+
+#showimg8{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855729828.jpg") no-repeat center;*/
+}
+
+#showimg9{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855735700.jpg") no-repeat center;*/
+}
+
+#showimg10{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855752464.jpg") no-repeat center;*/
+}
+
+#showimg11{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855774224.jpg") no-repeat center;*/
+}
+
+#showimg12{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5856616479.jpg") no-repeat center;*/
+}
+
+#showimg13{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5856654945.jpg") no-repeat center;*/
+}
+
+#showimg14{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5856658791.jpg") no-repeat center;*/
+}
+
+#showimg15{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5856697109.jpg") no-repeat center;*/
+}
+
+#showimg16{
+    width:200px ;
+    height: 200px;
+    /*background:url("../images/travel-images/normal/medium/5855191275.jpg") no-repeat center;*/
+}
+
+#titleinput{
+    height:25px;
+    border-radius: 0;
+}
+#titlebutton{
+    height:25px;
+}
+
+.aside a:hover{
+    background-color: #f0f0f0;
+}
+
+
+
+

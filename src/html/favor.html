@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/favor.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+<body>
+
+<div id="alert">
+    <template>
+        <el-button type="text" @click="open" id = "alertbutton"></el-button>
+    </template>
+</div>
+
+    <header class="header">
+
+    <div class="header-item">
+        <a href="../../index.html"><img src="../images/miku.png" alt="logo" ></a>
+    </div>
+
+    <div class="topnav">
+        <ul class="nav">
+            <li>
+                <a href="../../index.html">  <span>Home</span>  </a><!--首页-->
+            </li>
+
+            <li>
+                <a href="./browser.html"> <span>Browse</span></a><!--浏览页面-->
+            </li>
+
+            <li>
+                <a href="./search.html"> <span>Search</span></a><!--搜索页-->
+            </li>
+        </ul>
+    </div>
+
+        <div class = "user" id = "userlist">
+            <a href="">My account</a>
+            <div class="usercentre">
+                <a href="./upload.html">
+                    <img src="../images/upload.png" alt="upload">
+                    <span>&nbsp Upload</span>
+                </a>
+                <a href="./my_photo.html?page=1">
+                    <img src="../images/my_photo.png" alt="my_photo">
+                    <span>&nbsp My photos</span>
+                </a>
+                <a href="./favor.html?page=1">
+                    <img src="../images/favorite.png" alt="favorite">
+                    <span>&nbsp My favorities</span>
+                </a>
+                <a href = "javascript:" onclick="deletelogin()">
+                    <img src="../images/login.png" alt="login">
+                    <span>&nbsp Logout</span>
+                </a>
+            </div>
+
+        </div>
+
+</header>
+
+    <div class="myfavoriteframe">
+
+        <table class="myfavor">
+
+            <tr class="textline">
+                <td colspan="4" id = "photoframe">
+                    <span>&nbspMy&nbspFavorite</span>
+                </td>
+            </tr>
+
+            <tr class="favorone"  >
+                <td colspan="4">
+                    <div class="favoriteone">
+
+                        <a href="javascript:" onclick="jumptodetail(1)" id ="a1">
+                            <div id="favorimg1" >
+
+                            </div>
+                        </a>
+
+                        <div class="favoriteintroduction">
+                            <h3 id = "favortitle1"></h3>
+                            <br>
+                            <p id = "favortext1">
+
+                            </p>
+                            <br>
+                            <div id="funcbutton1">
+                                <template>
+                                    <el-button type="danger" @click="open" id = "b1">Delete</el-button>
+                                </template>
+                            </div>
+                            <br>
+                            <br>
+
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="favorone"  >
+                <td colspan="4">
+                    <div class="favoriteone">
+
+                        <a href="javascript:" onclick="jumptodetail(2)" id ="a2">
+                            <div id="favorimg2">
+
+                            </div>
+                        </a>
+
+                        <div class="favoriteintroduction">
+                            <h3 id = "favortitle2"></h3>
+                            <br>
+                            <p id = "favortext2">
+
+                            </p>
+                            <br>
+                            <div id="funcbutton2">
+                                <template>
+                                    <el-button type="danger" @click="open" id = "b2">Delete</el-button>
+                                </template>
+                            </div>
+                            <br>
+                            <br>
+
+                        </div>
+
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="favorone" >
+                <td colspan="4">
+                    <div class="favoriteone">
+
+                        <a href="javascript:" onclick="jumptodetail(3)" id ="a3">
+                            <div id="favorimg3">
+
+                            </div>
+                        </a>
+
+                        <div class="favoriteintroduction">
+                            <h3 id = "favortitle3"></h3>
+                            <br>
+                            <p id = "favortext3">
+
+                            </p>
+                            <br>
+                            <div id="funcbutton3">
+                                <template>
+                                    <el-button type="danger" @click="open" id = "b3">Delete</el-button>
+                                </template>
+                            </div>
+                            <br>
+                            <br>
+
+                        </div>
+
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="favorone" >
+                <td colspan="4">
+                    <div class="favoriteone">
+
+                        <a href="javascript:" onclick="jumptodetail(4)" id ="a4">
+                            <div id="favorimg4">
+
+                            </div>
+                        </a>
+
+                        <div class="favoriteintroduction">
+                            <h3 id = "favortitle4"></h3>
+                            <br>
+                            <p id = "favortext4">
+
+                            </p>
+                            <br>
+                            <div id="funcbutton4">
+                                <template>
+                                    <el-button type="danger" @click="open" id = "b4">Delete</el-button>
+                                </template>
+                            </div>
+                            <br>
+                            <br>
+
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="page">
+                <td colspan="4">
+                    <div id="pagenum">
+
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <footer>
+        <ul class="routine">
+            <li>
+                <a href="">Terms of Use</a>
+            </li>
+            <li>
+                <a href="">Privacy policy</a>
+            </li>
+            <li>
+                <a href="">Cookie</a>
+            </li>
+        </ul>
+
+        <ul class="aboutus">
+            <li>
+                <a href="">About us</a>
+            </li>
+            <li>
+                <a href="">Contact us</a>
+            </li>
+        </ul>
+
+        <ul class="ma">
+            <li>
+                <img src="../images/ma.png" alt="scan it" width="100px" height="100px">
+            </li>
+        </ul>
+
+        <div class="about">
+            Copyright © 2020 Xiaoyu Han. All rights reserved.
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/myfavor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel with Miku!</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+</head>
+<body>
+
+    <div class="loginframe">
+
+        <form action="">
+            <div class="sign">
+                <div class="loginpic">
+                    <img src="../images/miku.png" width="80px" height="80px" alt="miku"
+                         class = "mikutravel" onclick="location.href='../../index.html'">
+
+                </div>
+
+                <h3>Sign in for <span class = "mikutravel" onclick="location.href='../../index.html'">MikuTravel</span></h3>
+
+<!--                <form action="#" method = "POST" id = "ap">-->
+                    <div class="login">
+                        <div class="loginusername">
+                            <p>Username/E-mail:</p>
+                            <input type="text" class="inputtext" id = "theusername">
+                        </div>
+<!--                        pattern="^[0-9a-zA-Z_]+$|^[0-9a-zA-Z._-]+[@][0-9a-zA-Z._-]+([.][a-zA-Z]+){1,2}$" required-->
+                        <div class="password">
+                            <p>Password:</p>
+                            <input type="password" class="inputtext" id = "theuserpassword">
+                        </div>
+                        <div class="signin">
+                            <input type="button" value="Sign in" onclick="return getsalt()">
+                        </div>
+<!--                        onclick="location.href='./src/html/index.html'"-->
+                        <p id = "inf"></p>
+                    </div>
+<!--                </form>-->
+
+                <div class="newuser">
+                    No account? <a href="register.html">Come here to create!</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type = "text/javascript" src = "../js/md5.js"></script>
+    <script src="../js/login.js"></script>
+
+
+</body>
+</html>

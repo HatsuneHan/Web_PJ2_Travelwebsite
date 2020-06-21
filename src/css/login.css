@@ -1,0 +1,100 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.loginframe{
+    width:300px;
+    height:450px;
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.loginframe img{
+    position: relative;
+    margin-left: 110px;
+    margin-bottom: 15px;
+}
+
+
+.loginframe h3{
+    text-align: center;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.login p{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.inputtext{
+    width: 250px;
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    height:30px;
+    border:2px solid;
+    border-radius:10px;
+    outline: none;
+    font-size:16px;
+    text-indent: 6px;
+}
+
+.signin{
+    position: relative;
+    margin-left: 25px;
+
+}
+
+.signin input{
+    width:250px;
+    height: 35px;
+    margin-bottom: 20px;
+    background-color:#08a0ad ;
+    border-radius: 10px;
+    outline: none;
+}
+
+.newuser{
+    position: relative;
+    margin-left:30px;
+    margin-top:15px;
+}
+
+.newuser a{
+    margin-left: 5px;
+    display: inline-block;
+    color:#08a0ad ;
+}
+
+.newuser a:hover{
+    color: blue;
+}
+
+.login{
+    background-color: white;
+    padding-top: 25px;
+    border-radius: 20px;
+    border: 1px solid #dddddd;
+}
+
+.sign > h3 > span{
+    color: #08afad;
+    font: 24px "Comic Sans MS" ,"sans-serif";
+}
+
+
+#inf{
+    color: red;
+}
+
+.mikutravel{
+    cursor: pointer;
+}

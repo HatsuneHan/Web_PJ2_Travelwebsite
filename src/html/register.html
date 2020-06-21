@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regitser</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+<body>
+
+<!--<div id="app">-->
+<!--    <el-button @click="visible = true">Button</el-button>-->
+<!--    <el-dialog :visible.sync="visible" title="Hello world">-->
+<!--        <p>Try Element</p>-->
+<!--    </el-dialog>-->
+<!--</div>-->
+
+<div class="registerframe">
+
+    <form action="">
+        <div class="new">
+            <div class="registerpic">
+                <img src="../images/miku.png" width="80px" height="80px" alt="miku"
+                     class = "mikutravel" onclick="location.href='../../index.html'">
+
+            </div>
+
+            <h3>Sign up for <span class = "mikutravel" onclick="location.href='../../index.html'">MikuTravel</span></h3>
+
+            <div class="register">
+
+                    <div class="registerusername">
+                        <p>Username:</p>
+                        <input type="text" class="inputtext" id = "theusername">
+                    </div>
+
+                    <div class="registeremail">
+                        <p>E-mail:</p>
+                        <input type="email" class="inputtext" id = "theuseremail">
+                    </div>
+
+                    <div class="password">
+                        <p>Password:</p>
+                        <input type="password" class="inputtext" id = "theuserpassword">
+                    </div>
+
+                    <div class="confirmpassword">
+                        <p>Confirm your password:</p>
+                        <input type="password" class="inputtext" id = "confirmpassword">
+                    </div>
+
+                    <div class="signup">
+                        <input type="button" value="Sign up" onclick="return signupcheck()">
+                    </div>
+
+                    <p id = "inf"></p>
+                    <a href="login.html" id ="jumpnow"></a>
+
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type = "text/javascript" src = "../js/md5.js"></script>
+    <script src="../js/register.js"></script>
+
+
+</div>
+
+
+</body>
+</html>

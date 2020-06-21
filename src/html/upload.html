@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="../css/favor.css" type="text/css">
+    <link rel="stylesheet" href="../css/search.css" type="text/css">
+    <link rel="stylesheet" href="../css/upload.css" type="text/css">
+    <script src="../js/showpic.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+<div id="alert">
+    <template>
+        <el-button type="text" @click="open" id = "alertbutton"></el-button>
+    </template>
+</div>
+
+<div id="alert2">
+    <template>
+        <el-button type="text" @click="open" id = "alertbutton2"></el-button>
+    </template>
+</div>
+
+<body>
+    <header class="header">
+
+    <div class="header-item">
+        <a href="../../index.html"><img src="../images/miku.png" alt="logo" ></a>
+    </div>
+
+    <div class="topnav">
+        <ul class="nav">
+            <li>
+                <a href="../../index.html">  <span>Home</span>  </a><!--首页-->
+            </li>
+
+            <li>
+                <a href="./browser.html"> <span>Browse</span></a><!--浏览页面-->
+            </li>
+
+            <li>
+                <a href="./search.html" > <span>Search</span></a><!--搜索页-->
+            </li>
+        </ul>
+    </div>
+
+        <div class = "user" id = "userlist">
+            <a href="">My account</a>
+            <div class="usercentre">
+                <a href="./upload.html">
+                    <img src="../images/upload.png" alt="upload">
+                    <span>&nbsp Upload</span>
+                </a>
+                <a href="./my_photo.html?page=1">
+                    <img src="../images/my_photo.png" alt="my_photo">
+                    <span>&nbsp My photos</span>
+                </a>
+                <a href="./favor.html?page=1">
+                    <img src="../images/favorite.png" alt="favorite">
+                    <span>&nbsp My favorities</span>
+                </a>
+                <a href = "javascript:" onclick="deletelogin()">
+                    <img src="../images/login.png" alt="login">
+                    <span>&nbsp Logout</span>
+                </a>
+            </div>
+
+        </div>
+
+</header>
+<div class="searchframe">
+
+    <div class="mysearchframe">
+        <table  class="search">
+            <tr class="tabletext">
+                <td class="line1">
+                    <span>&nbsp&nbspUpload</span>
+                </td>
+            </tr>
+            <tr class="line2">
+                <td>
+
+                    <div class="picbox">
+                        <span id ="nopic">No picture</span>
+                        <img src="" id="scenery" style="display: flex;" />
+                        <span name = "thepic"></span>
+                    </div>
+
+                    <form action="../php/upload.php" method="post" enctype="multipart/form-data" target="nm_iframe" id = "form1">
+                        <a href="javascript:" class="a-upload" id = "pica">Upload<input type="file" name="file" id="file" onchange="showPreview(this, 'scenery')" required>
+                        </a>
+                        <!--                    <input type="button" value="Upload" id="upload">-->
+                        <br>
+                        <span>Title(no more than 255 characters):</span><br>
+                        <input type="search" id="search" name = "titletext" required><br>
+
+                        <span>Description:</span><br>
+                        <textarea rows="6" cols="20" id="searcharea" name = "destext" required></textarea><br>
+
+                        <span>Content:</span>
+                        <div class="filterbutton">
+                            <select name="content" id="button1">
+                                <option value="Scenery" class="option">Scenery</option>
+                                <option value="City" class="option">City</option>
+                                <option value="People" class="option">People</option>
+                                <option value="Animal" class="option">Animal</option>
+                                <option value="Building" class="option">Building</option>
+                                <option value="Wonder" class="option">Wonder</option>
+                                <option value="Other" class="option">Other</option>
+                            </select>
+                        </div>
+
+                        <span>Country:</span>
+                        <div class="filterbutton">
+                            <select name="country" id="button2" onChange="getCity('no')">
+
+                            </select>
+                        </div>
+
+                        <span>City:</span>
+                        <div class="filterbutton">
+                            <select name="city" id="button3">
+                                <option value="City">City</option>
+
+                            </select>
+                        </div>
+
+                        <input type="submit" value="Submit" class="submit" id = "submit">
+                    </form>
+
+                    <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+                </td>
+            </tr>
+
+<!--            <tr class="tablebutton">-->
+<!--                <td rowspan="2" colspan="4" >-->
+
+<!--                </td>-->
+
+<!--            </tr>-->
+
+
+        </table>
+    </div>
+
+
+
+
+</div>
+
+<footer>
+    <ul class="routine">
+        <li>
+            <a href="">Terms of Use</a>
+        </li>
+        <li>
+            <a href="">Privacy policy</a>
+        </li>
+        <li>
+            <a href="">Cookie</a>
+        </li>
+    </ul>
+
+    <ul class="aboutus">
+        <li>
+            <a href="">About us</a>
+        </li>
+        <li>
+            <a href="">Contact us</a>
+        </li>
+    </ul>
+
+    <ul class="ma">
+        <li>
+            <img src="../images/ma.png" alt="scan it" width="100px" height="100px">
+        </li>
+    </ul>
+
+    <div class="about">
+        Copyright © 2020 Xiaoyu Han. All rights reserved.
+    </div>
+
+</footer>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/upload.js"></script>
+
+</body>
+</html>

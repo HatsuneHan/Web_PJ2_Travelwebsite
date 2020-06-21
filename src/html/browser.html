@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Broswer</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/browser.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_footer.css" type="text/css">
+    <script src="../js/countrycity.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+<body>
+    <header class="header">
+
+    <div class="header-item">
+        <a href="../../index.html"><img src="../images/miku.png" alt="logo" ></a>
+    </div>
+
+    <div class="topnav">
+        <ul class="nav">
+            <li>
+                <a href="../../index.html">  <span>Home</span>  </a><!--首页-->
+            </li>
+
+            <li class="now">
+                <a href="./browser.html"> <span>Browse</span></a><!--浏览页面-->
+            </li>
+
+            <li>
+                <a href="./search.html"> <span>Search</span></a><!--搜索页-->
+            </li>
+        </ul>
+    </div>
+
+        <div class = "user" id = "userlist">
+            <a href="">My account</a>
+            <div class="usercentre">
+                <a href="./upload.html">
+                    <img src="../images/upload.png" alt="upload">
+                    <span>&nbsp Upload</span>
+                </a>
+                <a href="./my_photo.html?page=1">
+                    <img src="../images/my_photo.png" alt="my_photo">
+                    <span>&nbsp My photos</span>
+                </a>
+                <a href="./favor.html?page=1">
+                    <img src="../images/favorite.png" alt="favorite">
+                    <span>&nbsp My favorities</span>
+                </a>
+                <a href = "javascript:" onclick="deletelogin()">
+                    <img src="../images/login.png" alt="login">
+                    <span>&nbsp Logout</span>
+                </a>
+            </div>
+
+        </div>
+
+</header>
+
+    <div class = aside >
+
+        <table  class="search">
+            <tr class="tabletext">
+                <td class="line1">
+                    &nbsp&nbspSearch by title
+                </td>
+            </tr>
+            <tr class="line2">
+                <td>
+<!--                    <input type="search" id="search">&nbsp<input type="button" value = "Search" class="searchbutton"-->
+<!--                                                                 onclick=searchbytitle() >-->
+                    <div id="app">
+                        <div>
+                            <el-input placeholder="Input the title" v-model="input" class="input-with-select" id = "titleinput">
+                                <el-button slot="append" icon="el-icon-search" id = "titlebutton" onclick=searchbytitle()></el-button>
+                            </el-input>
+                        </div>
+                    </div>
+
+                    <script>
+                        export default {
+                            data() {
+                                return {
+                                    input: ''
+                                }
+                            }
+                        }
+                    </script>
+                </td>
+            </tr>
+        </table>
+
+        <table class = "Hot" id = "hotcontent">
+
+            <tr class="tabletext">
+                <td class="line1">
+                    &nbsp&nbspHot Content
+                </td>
+            </tr>
+
+
+        </table>
+
+
+
+
+        <table class = "Hot" id = "hotcountry">
+
+            <tr class="tabletext" >
+                <td class="line1">
+                    &nbsp&nbspHot Country
+                </td>
+            </tr>
+
+
+
+        </table>
+
+        <table  class = "Hot" id = "hotcity">
+
+            <tr class="tabletext" >
+                <td class="line1">
+                    &nbsp&nbspHot City
+                </td>
+            </tr>
+
+
+
+        </table>
+    </div>
+
+    <div class="filter">
+        <table class="filtertools">
+
+            <tr>
+                <td colspan="4">
+                    &nbspFilter
+                </td>
+            </tr>
+
+            <tr class="tablebutton">
+                <td rowspan="2" colspan="4" >
+                    <div class="filterbutton">
+                        <select name="content" id="button1">
+
+                        </select>
+                        <select name="country" id="button2" onChange="getCity()">
+
+                        </select>
+                        <select name="city" id="button3">
+                            <option value="City">City</option>
+                        </select>
+                        <input type="button" value="Filter" onclick=clickfilter() >
+                    </div>
+                </td>
+                
+            </tr>
+            <tr>
+
+            </tr>
+            <tr class="tableimg">
+                <td colspan="4">
+                    <div class="image">
+
+                        <a href="javascript:" onclick="jumpdetail(1)" id = "a1">
+                            <div id="showimg1">
+
+                            </div>
+                        </a>
+
+                        <a href="javascript:" onclick="jumpdetail(2)" id = "a2">
+                            <div id="showimg2">
+
+                            </div>
+                        </a>
+
+                        <a href="javascript:" onclick="jumpdetail(3)" id = "a3">
+                            <div id="showimg3">
+
+                            </div>
+                        </a>
+
+                        <a href="javascript:" onclick="jumpdetail(4)" id = "a4">
+                            <div id="showimg4">
+
+                            </div>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="tableimg">
+                <td colspan="4">
+                    <div class="image">
+                        <a href="javascript:" onclick="jumpdetail(5)"  id = "a5">
+                            <div id="showimg5" >
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(6)" id = "a6">
+                            <div id="showimg6">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(7)" id = "a7">
+                            <div id="showimg7">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(8)" id = "a8">
+                            <div id="showimg8" >
+
+                            </div>
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="tableimg">
+                <td colspan="4">
+                    <div class="image">
+                        <a href="javascript:" onclick="jumpdetail(9)" id = "a9">
+                            <div id="showimg9">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(10)" id = "a10">
+                            <div id="showimg10">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(11)" id = "a11">
+                            <div id="showimg11">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(12)" id = "a12">
+                            <div id="showimg12">
+
+                            </div>
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="tableimg">
+                <td colspan="4">
+                    <div class="image">
+                        <a href="javascript:" onclick="jumpdetail(13)" id = "a13">
+                            <div id="showimg13">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(14)" id = "a14">
+                            <div id="showimg14">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(15)" id = "a15">
+                            <div id="showimg15">
+
+                            </div>
+                        </a>
+                        <a href="javascript:" onclick="jumpdetail(16)" id = "a16">
+                            <div id="showimg16">
+
+                            </div>
+                        </a>
+
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="page">
+                <td colspan="4">
+                    <div id="pagenum">
+
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <ul class="routine">
+            <li>
+                <a href="">Terms of Use</a>
+            </li>
+            <li>
+                <a href="">Privacy policy</a>
+            </li>
+            <li>
+                <a href="">Cookie</a>
+            </li>
+        </ul>
+
+        <ul class="aboutus">
+            <li>
+                <a href="">About us</a>
+            </li>
+            <li>
+                <a href="">Contact us</a>
+            </li>
+        </ul>
+
+        <ul class="ma">
+            <li>
+                <img src="../images/ma.png" alt="scan it" width="100px" height="100px">
+            </li>
+        </ul>
+
+        <div class="about">
+            Copyright © 2020 Xiaoyu Han. All rights reserved.
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/browser.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+header{
+    display:inline-block ;
+    width:100% ;
+    padding-top: 5px;
+    top:0;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    /*background-color: white;*/
+    z-index: 9;
+    border-bottom: 1px solid #e0e0e0;
+    background-color:white;
+}
+
+.nav{
+    list-style-type: none;
+    top : 11px;
+    left: 45px;
+    position: fixed;
+    letter-spacing: 15px ;
+}
+
+
+.nav a:hover{
+    color: #287dcd;
+    background-color: #f0f0f0;
+}
+
+.now a>span{
+    text-decoration: underline;
+}
+
+.nav>li {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: normal ;
+}
+
+a{
+    color:#08a0ad ;
+}
+
+.header-item img{
+    position:fixed;
+    width:35px;
+    height:35px;
+}
+
+.user{
+    position: fixed;
+    right:20px;
+    top:10px;
+    font: 20px sans-serif;
+    width:180px;
+    text-align: center;
+    display: none;
+}
+
+.menu span{
+    color: #287dcd;
+}
+
+.usercentre{
+    margin-top: 12px;
+    font-size: 18px;
+    margin-left: 10px;
+    display: none;
+}
+
+
+.usercentre a{
+    color: black;
+    background-color: #ffffff ;
+    line-height: 40px;
+    opacity: 0.8;
+}
+
+
+.user> a:hover{
+    color: #287dcd;
+    background-color: #f0f0f0;
+}
+
+.user:hover .usercentre{
+    display: block;
+}
+
+.usercentre img{
+    display: inline-block;
+    float: left;
+}
+
+
+.usercentre a:hover{
+    color: #287dcd;
+    background-color: #f0f0f0;
+}
+
+
+
+footer {
+    height: 10%;
+    display:inline-block ;
+    width:100% ;
+    z-index: 9;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #08afad;
+
+    position: relative;
+    margin-top: 5%;
+}
+
+footer ul{
+    display: inline-block;
+}
+
+footer a{
+    color:white;
+}
+
+.routine{
+    position: relative;
+    margin-top: 3%;
+    margin-left: 10%;
+}
+
+.routine li{
+    margin: 30px;
+}
+
+.aboutus li{
+    margin: 30px;
+}
+
+footer a:hover{
+    color: #287dcd;
+    background-color: #f0f0f0;
+}
+
+.aboutus{
+    position: relative;
+    margin-top: 0;
+    margin-left: 25%;
+}
+
+.about{
+    position: relative;
+    height: 60px;
+    clear: both;
+    text-align: center;
+    color:white;
+}
+
+.ma{
+    position: relative;
+    margin-top: 0;
+    margin-left: 25%;
+}
+

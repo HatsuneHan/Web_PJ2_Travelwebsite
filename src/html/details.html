@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="../css/favor.css" type="text/css">
+    <link rel="stylesheet" href="../css/search.css" type="text/css">
+    <link rel="stylesheet" href="../css/upload.css" type="text/css">
+    <link rel="stylesheet" href="../css/details.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="alert">
+    <template>
+        <el-button type="text" @click="open" id = "alertbutton"></el-button>
+    </template>
+</div>
+<header class="header">
+
+    <div class="header-item">
+        <a href="../../index.html"><img src="../images/miku.png" alt="logo" ></a>
+    </div>
+
+    <div class="topnav">
+        <ul class="nav">
+            <li>
+                <a href="../../index.html">  <span>Home</span>  </a><!--首页-->
+            </li>
+
+            <li>
+                <a href="./browser.html"> <span>Browse</span></a><!--浏览页面-->
+            </li>
+
+            <li>
+                <a href="./search.html" > <span>Search</span></a><!--搜索页-->
+            </li>
+        </ul>
+    </div>
+
+    <div class = "user" id = "userlist">
+        <a href="">My account</a>
+        <div class="usercentre">
+            <a href="./upload.html">
+                <img src="../images/upload.png" alt="upload">
+                <span>&nbsp Upload</span>
+            </a>
+            <a href="./my_photo.html?page=1">
+                <img src="../images/my_photo.png" alt="my_photo">
+                <span>&nbsp My photos</span>
+            </a>
+            <a href="./favor.html?page=1">
+                <img src="../images/favorite.png" alt="favorite">
+                <span>&nbsp My favorities</span>
+            </a>
+            <a href = "javascript:" onclick="deletelogin()">
+                <img src="../images/login.png" alt="login">
+                <span>&nbsp Logout</span>
+            </a>
+        </div>
+
+    </div>
+
+</header>
+<div class="searchframe">
+
+    <div class="mysearchframe">
+        <table  class="search">
+            <tr class="tabletext">
+                <td class="line1" colspan="2">
+                    <span>&nbsp&nbspDetails</span>
+                </td>
+            </tr>
+            <tr class="line2">
+                <td colspan="2">
+                    <div class="introtext" id = "title">
+                    </div>
+                </td>
+            </tr>
+            <tr class="line2">
+                <td id="picdetail">
+                    <div id="favorimg">
+
+                    </div>
+                </td>
+
+                <td class="likenumber">
+                    <table class="search" id="favornumber">
+                        <tr class="tabletext">
+                            <td class="line1">
+                                <span>&nbspLike&nbspNumber</span>
+                            </td>
+                        </tr>
+                        <tr class="line2">
+                            <td>
+                                <div class="number" id = "fn">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="search" id="imgdetails">
+                        <tr class="tabletext">
+                            <td class="line1">
+                                <span>&nbspLike&nbspNumber</span>
+                            </td>
+                        </tr>
+                        <tr class="line2">
+                            <td>
+                                <div class="content" id = "content1">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="line2">
+                            <td>
+                                <div class="content" id = "content2">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="line2">
+                            <td>
+                                <div class="content" id = "content3">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                   <div class="favorarea">
+                       <input type="button" id="favorbutton" value="Favor" onclick=favor(geturlvalue("pic"))>
+                   </div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div class="description">
+                        <p class="text1">
+                            <strong>Description:</strong>
+                        </p>
+                        <p class="text2" id = "pictext">
+                        </p>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+
+</div>
+
+<footer>
+    <ul class="routine">
+        <li>
+            <a href="">Terms of Use</a>
+        </li>
+        <li>
+            <a href="">Privacy policy</a>
+        </li>
+        <li>
+            <a href="">Cookie</a>
+        </li>
+    </ul>
+
+    <ul class="aboutus">
+        <li>
+            <a href="">About us</a>
+        </li>
+        <li>
+            <a href="">Contact us</a>
+        </li>
+    </ul>
+
+    <ul class="ma">
+        <li>
+            <img src="../images/ma.png" alt="scan it" width="100px" height="100px">
+        </li>
+    </ul>
+
+    <div class="about">
+        Copyright © 2020 Xiaoyu Han. All rights reserved.
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/check.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>
+
+<a href="../html/"></a>

@@ -1,0 +1,162 @@
+
+.myfavoriteframe{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 70px;
+    border-radius: 5px;
+    border: solid .3em #e0e0e0;
+    background-color: #e0e0e0;
+    width:85%;
+    border-collapse: separate;
+    border-spacing: 2px ;
+}
+
+.textline span{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.textline{
+    line-height: 25px;
+}
+
+.favoriteone{
+    background-color: white;
+}
+
+.favoritepic{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.favoriteintroduction{
+    display: inline-block;
+    position: relative;
+    width:60%;
+}
+
+.favoriteintroduction p{
+    width:90%;
+}
+
+.deletebutton{
+     color: red;
+     width:75px;
+     height:38px;
+}
+
+.modifybutton{
+    color: purple;
+    width:75px;
+    height:38px;
+}
+
+
+#pagenum{
+    position: relative;
+    margin-left: 35%;
+}
+.pagenum{
+    display: inline-block;
+    width:12px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.pagenum:hover{
+    background-color: #f0f0f0;
+}
+
+
+
+.favoriteintroduction > p::after {
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 0px 1px 45px;
+}
+
+.favoriteintroduction p {
+    position:relative;
+    line-height:1.4em;
+    /* 3 times the line-height to show 3 lines */
+    height:5.6em;
+    overflow:hidden;
+}
+
+#favorimg1{
+    width:300px ;
+    height:200px;
+    display: none ;
+}
+
+#favorimg2{
+    width:300px ;
+    height:200px;
+    display: none ;
+}
+
+#favorimg3{
+    width:300px ;
+    height:200px;
+    display: none ;
+}
+
+#favorimg4{
+    width:300px ;
+    height:200px;
+    display: none ;
+}
+
+.favoriteone a{
+    width:300px;
+    height:200px;
+    display: inline-block;
+    position: relative;
+    margin:25px;
+}
+
+.pagenum2{
+    display: inline-block;
+    width:30px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.pagenum2:hover{
+    background-color: #f0f0f0;
+}
+
+td{
+    width:10000px;
+}
+
+.deletebutton{
+    display: none;
+}
+
+.modifybutton{
+    display: none;
+}
+
+#favortext1{
+    display: none;
+}
+#favortext2{
+    display: none;
+}
+#favortext3{
+    display: none;
+}
+#favortext4{
+    display: none;
+}
+

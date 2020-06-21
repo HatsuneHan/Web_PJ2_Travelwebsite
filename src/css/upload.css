@@ -1,0 +1,130 @@
+.inputfile{
+    position: relative;
+    /*display:block;*/
+    width: 100%;
+}
+
+.a-upload {
+    padding: 4px 10px;
+    height: 25px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    background: #08afad;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1 ;
+    width:15%;
+    margin-left: 41.5%;
+    margin-top: 3%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.inputword{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 9%;
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+
+.line2 span{
+    position: relative;
+    margin-left: 10px;
+}
+
+.submit{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    width: 8%;
+    color: white;
+    background-color: #08afad;
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#upload{
+    width:15% ;
+    height:35px;
+    outline: none;
+    background-color: #08afad;
+    color: white;
+    position: relative;
+    margin-left: 42.5%;
+    margin-top: 3%;
+    line-height: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-size: 16px  ;
+}
+
+#scenery{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.picbox{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 9%;
+}
+
+.mysearchframe{
+    margin-bottom: 130px;
+}
+
+.filterbutton select{
+    width:20%;
+    height:30px;
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline:none;
+    background-color: #f0f0f0;
+}
+
+
+.tablebutton{
+    background-color: white;
+}
+
+.option{
+    background-color: #f0f0f0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

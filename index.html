@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="src/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="src/css/home.css" type="text/css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./src/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<!--    <script src="//unpkg.com/vue/dist/vue.js"></script>-->
+<!--    <script src="//unpkg.com/element-ui@2.13.2/lib/index.js"></script>-->
+</head>
+<body>
+   <div class="overall" id="top">
+       <header class="header">
+
+           <div class="header-item">
+               <a href="./index.html"><img src="src/images/miku.png" alt="logo" ></a>
+           </div>
+
+           <div class="topnav">
+               <ul class="nav">
+                   <li class="now">
+                       <a href="./index.html"><span>Home</span></a><!--首页-->
+                   </li>
+
+                   <li>
+                       <a href="src/html/browser.html?value=null&attr=ALL&page=1">Browse</a><!--浏览页面-->
+                   </li>
+
+                   <li>
+                       <a href="src/html/search.html">Search</a><!--搜索页-->
+                   </li>
+               </ul>
+           </div>
+
+           <div class = "user" id = "userlist">
+               <a href="">My account</a>
+               <div class="usercentre">
+                   <a href="src/html/upload.html">
+                       <img src="src/images/upload.png" alt="upload">
+                       <span>&nbsp Upload</span>
+                   </a>
+                   <a href="src/html/my_photo.html?page=1">
+                       <img src="src/images/my_photo.png" alt="my_photo">
+                       <span>&nbsp My photos</span>
+                   </a>
+                   <a href="src/html/favor.html?page=1">
+                       <img src="src/images/favorite.png" alt="favorite">
+                       <span>&nbsp My favorities</span>
+                   </a>
+                   <a href = "javascript:" onclick="deletelogin()">
+                       <img src="src/images/login.png" alt="login">
+                       <span>&nbsp Logout</span>
+                   </a>
+               </div>
+
+           </div>
+
+       </header>
+
+       <div class = "headphoto">
+           <!--        <a href="" class="imglink">-->
+           <img src="src/images/homephoto.jpg" alt="headphoto" class="mainimg" >
+           <!--        </a>-->
+       </div>
+
+       <div class="contentphoto">
+<!--           "src/images/travel-images/normal/medium/222222.jpg"-->
+           <div class="imagecontainer">
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(1)>
+                           <div id="mainimg1">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title1>
+
+                       </h4>
+                       <div class="image-text" >
+                           <p id = des1>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(2)>
+                           <div id="mainimg2">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title2>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des2>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(3)>
+                           <div id="mainimg3">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title3>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des3>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(4)>
+                           <div id="mainimg4">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title4>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des4>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(5)>
+                           <div id="mainimg5">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title5>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des5>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(6)>
+                           <div id="mainimg6">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title6>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des6>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(7)>
+                           <div id="mainimg7">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title7>
+
+                       </h4>
+                       <div class="image-text">
+                           <p id = des7>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class = "image-card">
+                   <div class="img-main">
+                       <a href="javascript:" class="imglink" onclick = jumpdetail(8)>
+                           <div id="mainimg8">
+
+                           </div>
+                       </a>
+                   </div>
+                   <div class="image-introduction">
+                       <h4 id = title8></h4>
+                       <div class="image-text">
+                           <p id = des8>
+
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <footer>
+       <ul class="routine">
+           <li>
+               <a href="">Terms of Use</a>
+           </li>
+           <li>
+               <a href="">Privacy policy</a>
+           </li>
+           <li>
+               <a href="">Cookie</a>
+           </li>
+       </ul>
+
+       <ul class="aboutus">
+           <li>
+               <a href="">About us</a>
+           </li>
+           <li>
+               <a href="">Contact us</a>
+           </li>
+       </ul>
+
+       <ul class="ma">
+           <li>
+               <img src="src/images/ma.png" alt="scan it" width="100px" height="100px">
+           </li>
+       </ul>
+
+       <div class="about" id = "about">
+           Copyright © 2020 Xiaoyu Han. All rights reserved.
+       </div>
+
+   </footer>
+
+
+
+
+
+   <a href="javascript:" onclick=getphotopath("refresh")>
+       <img src="src/images/refresh.png" alt="" id="refresh" ></a>
+   <a href="#top"><img src="src/images/totop.png" alt="totop" id="totop"></a>
+
+<!--   <div id="app">-->
+<!--       <template>-->
+<!--           <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>-->
+<!--       </template>-->
+<!--   </div>-->
+
+
+   <script type="text/javascript" src="src/js/jquery-3.3.1.min.js"></script>
+   <script src="src/js/home.js"></script>
+
+</body>
+</html>
