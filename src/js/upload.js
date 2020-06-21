@@ -82,7 +82,6 @@ function getselectele(num)
 
         },
         error: function (err) {
-            alert("fail");
         }
     });
 }
@@ -174,7 +173,6 @@ function getCity(changecity) {
 
         },
         error: function (err) {
-            alert("fail");
         }
     })
 }
@@ -313,7 +311,6 @@ function modify(picpath)
 
         },
         error:function(err) {
-            alert(err) ;
         }
     })
 }

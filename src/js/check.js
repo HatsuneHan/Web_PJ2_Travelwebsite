@@ -87,7 +87,6 @@ function checklogin()
             }
         },
         error:function (err) {
-            alert(err) ;
         }
     });
 
@@ -101,7 +100,6 @@ function deletelogin()
             window.location.href = "../html/login.html" ;
         },
         error:function (err) {
-            alert(err) ;
         }
     });
 }

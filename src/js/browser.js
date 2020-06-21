@@ -55,7 +55,6 @@ function gethotlist()
 
         },
         error:function (err) {
-            alert(err) ;
         },
     })
 }
@@ -120,7 +119,6 @@ function getpic(trname,atr)
 
         },
         error: function (err) {
-            alert("fail");
         }
     });
 }
@@ -413,7 +411,6 @@ function getselectele(num)
 
         },
         error: function (err) {
-            alert("fail");
         }
     });
 }
@@ -505,7 +502,7 @@ function getCity() {
 
         },
         error: function (err) {
-            alert("fail");
+
         }
     })
 }
@@ -532,7 +529,6 @@ function filterpic(trname)
 
         },
         error: function (err) {
-            alert(err);
         }
     });
 }

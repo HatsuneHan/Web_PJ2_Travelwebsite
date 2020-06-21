@@ -105,7 +105,6 @@ function getfavorpicinf()
 
         },
         error:function(err) {
-            alert(err)
         }
 
     });
@@ -219,7 +218,6 @@ function deletefavor(picpath) {
             location.reload() ;
         },
         error:function (err) {
-            alert(err) ;
         }
     })
 }

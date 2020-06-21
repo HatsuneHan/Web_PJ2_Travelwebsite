@@ -85,7 +85,6 @@ function signupcheck()
                 }
             },
             error:function(err){
-                alert("error!") ;
             }
         });
     }

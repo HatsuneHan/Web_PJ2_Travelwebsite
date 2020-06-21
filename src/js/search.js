@@ -77,7 +77,6 @@ function conductsearch()
             laypic(data) ;
         },
         error:function (err){
-            alert(err) ;
         }
     })
 

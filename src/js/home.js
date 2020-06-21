@@ -50,7 +50,6 @@ function checklogin()
             }
         },
         error:function (err) {
-            alert(err) ;
         }
     });
 
@@ -64,7 +63,7 @@ function deletelogin()
             window.location.href = "src/html/login.html" ;
         },
         error:function (err) {
-            alert(err) ;
+
         }
     });
 }
@@ -182,8 +181,6 @@ function getphotopath(met)
 
         },
         error:function(err) {
-            alert("123") ;
-            alert(err) ;
         }
 
     });
@@ -265,14 +262,9 @@ function jumpdetail(seq) {
 
     let hrefpattern = /\?/ ;
     let jumpto ;
-    let nowhref = window.location.href ;
-    nowhref = nowhref.replace(/index/,"src/html/details") ;
-    if(hrefpattern.test(nowhref))
-        jumpto = nowhref + "&pic="+ encodeURI(jumppath);
-    else
-        jumpto = nowhref + "?pic="+ encodeURI(jumppath);
-
-    window.location.href = jumpto ;
+    let nowhref = "src/html/details.html?pic="
+    nowhref = nowhref + encodeURI(jumppath);
+    window.location.href = nowhref ;
 
 
 }

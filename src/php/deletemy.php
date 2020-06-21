@@ -13,7 +13,7 @@ try {
         $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $query = $pdo->prepare("UPDATE travelimage SET UID = NULL WHERE PATH = :picpath ;");
+        $query = $pdo->prepare("UPDATE travelimage SET UID = 0 WHERE PATH = :picpath ;");
         $query->bindValue(':picpath',$picpath) ;
         $query->execute() ;
 

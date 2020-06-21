@@ -18,7 +18,6 @@ function getsalt()
             checkpassword(username,hashpassword) ;
         },
         error:function (err) {
-            alert(err) ;
         }
     });
 
@@ -78,7 +77,6 @@ function checkpassword(acc,pass)
 
         },
         error:function(err){
-            alert("error!") ;
         }
     });
 

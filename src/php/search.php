@@ -17,7 +17,7 @@ try{
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if($attr == "title"):
-        $query = $pdo->prepare("SELECT PATH,Title,Description FROM travelimage WHERE Title LIKE :value LIMIT 20;") ;  ;
+        $query = $pdo->prepare("SELECT PATH,Title,Description FROM travelimage WHERE Title LIKE :value AND UID != 0 LIMIT 20;") ;  ;
         $svalue = "%" . $value . "%" ;
         $query->bindValue(":value",$svalue) ;
         $query->execute() ;
@@ -28,7 +28,7 @@ try{
         endwhile;
 
     elseif($attr == "description"):
-        $query = $pdo->prepare("SELECT PATH,Title,Description FROM travelimage WHERE Description LIKE :value LIMIT 20;") ;  ;
+        $query = $pdo->prepare("SELECT PATH,Title,Description FROM travelimage WHERE Description LIKE :value AND UID != 0 LIMIT 20;") ;  
         $svalue = "%" . $value . "%" ;
         $query->bindValue(":value",$svalue) ;
         $query->execute() ;

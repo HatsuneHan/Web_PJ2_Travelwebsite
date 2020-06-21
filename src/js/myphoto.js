@@ -101,7 +101,6 @@ function getmypicinf()
 
         },
         error:function(err) {
-            alert(err)
         }
 
     });
@@ -216,7 +215,6 @@ function deletemy(picpath) {
             location.reload() ;
         },
         error:function (err) {
-            alert(err) ;
         }
     })
 }

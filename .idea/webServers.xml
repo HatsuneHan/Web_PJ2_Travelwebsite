@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f238beb7-107a-466a-87f0-5ace13bb0844" name="PJ2" url="http://localhost:63342">
+        <fileTransfer port="0" mountedRoot="D:\Hatsune\大二下\Web\PJ2" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

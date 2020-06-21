@@ -20,7 +20,7 @@ try{
 
     if($content == "Content"):
         if($country == "Country"):
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE PATH IS NOT NULL;") ;
+            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE PATH IS NOT NULL AND UID != 0;") ;
             $query->execute() ;
 
             while($row = $query -> fetch()):
@@ -28,7 +28,7 @@ try{
             endwhile;
         else:
             if($city == "City"):
-                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND PATH IS NOT NULL") ;
+                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND PATH IS NOT NULL AND UID != 0") ;
                 $query->bindValue(":countryname",$country) ;
                 $query->execute() ;
 
@@ -36,7 +36,7 @@ try{
                     array_push($resultarray,$row['PATH']) ;
                 endwhile;
             else:
-                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :cityname) AND PATH IS NOT NULL;") ;
+                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :cityname) AND PATH IS NOT NULL AND UID != 0;") ;
                 $query->bindValue(":countryname",$country) ;
                 $query->bindValue(":cityname",$city) ;
                 $query->execute() ;
@@ -49,7 +49,7 @@ try{
 
     else:
         if($country == "Country"):
-            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND PATH IS NOT NULL") ;
+            $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND PATH IS NOT NULL AND UID != 0") ;
             $query->bindValue(":content",$content) ;
             $query->execute() ;
 
@@ -58,7 +58,7 @@ try{
             endwhile;
         else:
             if($city == "City"):
-                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND PATH IS NOT NULL ;") ;
+                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND PATH IS NOT NULL AND UID != 0;") ;
                 $query->bindValue(":content",$content) ;
                 $query->bindValue(":countryname",$country) ;
                 $query->execute() ;
@@ -67,7 +67,7 @@ try{
                     array_push($resultarray,$row['PATH']) ;
                 endwhile;
             else:
-                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :cityname) AND PATH IS NOT NULL ;") ;
+                $query = $pdo->prepare("SELECT PATH FROM travelimage WHERE Content = :content AND CountryCodeISO IN (SELECT ISO FROM geocountries WHERE CountryName = :countryname) AND CityCode IN (SELECT GeoNameID FROM geocities WHERE AsciiName = :cityname) AND PATH IS NOT NULL AND UID != 0;") ;
                 $query->bindValue(":content",$content) ;
                 $query->bindValue(":countryname",$country) ;
                 $query->bindValue(":cityname",$city) ;
